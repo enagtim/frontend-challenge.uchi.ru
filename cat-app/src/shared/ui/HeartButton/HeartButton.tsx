@@ -18,7 +18,6 @@ function HeartButton({enimal_id, url}: {enimal_id: string, url: string}) {
     }
   }
 
-
   return (
     <button
       className={`${styles.heartButton} ${isActive ? styles.active : ''}`}
