@@ -6,10 +6,12 @@ import EnimalCard from "../../entity/EnimalCard";
 
 function EnimalsPage () {
     const [enimals, setEnimals] = useState<IEnimal[]>([]);
-    // const [error, setError] = useState<string | null>(null)
+    const [loading, setIsLoading] = useState<boolean>(false);
+    const [error, setError] = useState<string | null>(null)
 
     useEffect(() => {
-        const getEnimal = async () => {
+        const getEnimals = async () => {
+            setIsLoading(true)
             try{
                 const {data} = await axios.get<IEnimal[]>('https://api.thecatapi.com/v1/images/search', {
                     params: {limit: 10},
@@ -22,18 +24,29 @@ function EnimalsPage () {
                 return data
             }catch(error){
                 if(error instanceof Error) {
-                    // setError(error.message);
-                    console.log(error.message);
+                    setError(error.message);
                 }
+            }finally{
+                setIsLoading(false)
             }
         }
-        getEnimal();
+        getEnimals();
     }, [])
 
+    if (loading){
+        return <p>Загрузка....</p>
+    }
+    if (error) {
+        return <p>Ошибка: {error}</p>;
+    }
     return (
         <div className={styles.card_container}>
             {enimals.map((enimal) => (
-                <EnimalCard key={enimal.id} id={enimal.id} width={225} height={225} url={enimal.url}/> 
+                <EnimalCard 
+                    key={enimal.id} 
+                    id={enimal.id} 
+                    url={enimal.url}
+                /> 
             ))}
         </div>
     )
