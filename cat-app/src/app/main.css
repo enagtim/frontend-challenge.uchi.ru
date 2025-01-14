@@ -1,0 +1,19 @@
+*{
+    box-sizing: border-box;
+}
+:root {
+    --Primary-500---Accent: #2196F3;
+    --Primary-600: #1E88E5;
+    --White-High-Emphasis: #FFF;
+    --White-Medium-Emphasis: rgba(255, 255, 255, 0.70);
+}
+body {
+    max-width: 1440px;
+    margin: 0 auto;
+    font-family: "Roboto", serif;
+    font-style: normal;
+    font-weight: 400;
+}
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 0 62px 0 62px;
+    background-color: var(--Primary-500---Accent);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.24);
+    margin-bottom: 48px;
+}
+.navigation {
+    display: flex;
+}
