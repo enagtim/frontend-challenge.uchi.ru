@@ -1,11 +1,11 @@
 import Header from '../widgets/header'
-import CatsPage from '../pages/CatsPage/CatsPage'
-import FavoriteCatsPage from '../pages/FavoriteCatsPage/FavoriteCatsPage'
+import EnimalsPage from '../pages/EnimalsPage/EnimalsPage'
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter } from 'react-router'
 import { RouterProvider } from 'react-router'
 import './main.css'
+import FavoriteEnimalsPage from '../pages/FavoriteEnimalsPage/FavoriteEnimalsPage'
 
 const router = createBrowserRouter([
   {
@@ -14,11 +14,11 @@ const router = createBrowserRouter([
     children: [
       {
         path: '/',
-        element: <CatsPage />
+        element: <EnimalsPage />
       },
       {
-        path: '/favorite-cats',
-        element: <FavoriteCatsPage />
+        path: '/favorite-enimals',
+        element: <FavoriteEnimalsPage />
       }
     ]
   }

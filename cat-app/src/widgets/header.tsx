@@ -8,7 +8,7 @@ function Header () {
             <header className={styles.header}>
                 <nav className={styles.navigation}>
                     <Tab url="/" name="Все котики" />
-                    <Tab url="/favorite-cats" name="Любимые котики"/>
+                    <Tab url="/favorite-enimals" name="Любимые котики"/>
                 </nav>
             </header>
             <Outlet/>
