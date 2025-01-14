@@ -4,7 +4,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter } from 'react-router'
 import { RouterProvider } from 'react-router'
-import './main.css'
+import './global.css'
 import FavoriteEnimalsPage from '../pages/FavoriteEnimalsPage/FavoriteEnimalsPage'
 
 const router = createBrowserRouter([
