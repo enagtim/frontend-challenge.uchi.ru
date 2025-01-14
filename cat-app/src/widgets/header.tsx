@@ -1,17 +1,23 @@
 import { Outlet } from 'react-router';
 import Tab from '../shared/ui/Tab/Tab';
 import styles from './header.module.css';
+import BurgerMenu from '../shared/ui/BurgerMenu/BurgerMenu';
 
 function Header() {
 	return (
 		<>
 			<header className={styles.header}>
 				<nav className={styles.navigation}>
-					<Tab url="/" name="Все котики" />
-					<Tab url="/favorite-enimals" name="Любимые котики" />
+					<div className={styles.tabs}>
+						<Tab url="/" name="Все котики" />
+						<Tab url="/favorite-enimals" name="Любимые котики" />
+					</div>
+					<BurgerMenu />
 				</nav>
 			</header>
-			<Outlet />
+			<div className={styles.body}>
+				<Outlet />
+			</div>
 		</>
 	);
 }

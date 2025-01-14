@@ -8,12 +8,17 @@
     --White-Medium-Emphasis: rgba(255, 255, 255, 0.70);
 }
 body {
-    max-width: 1440px;
-    margin: 0 auto;
     font-family: "Roboto", serif;
     font-style: normal;
     font-weight: 400;
+    margin: 0;
+    padding: 0;
+    min-width: 375px;
 }
 a {
     text-decoration: none;
+}
+button {
+    background: none;
+    border: none;
 }
